@@ -1,25 +1,29 @@
 package com.rad21.githubuser.data.retrofit
 
-import de.hdodenhof.circleimageview.BuildConfig
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.rad21.githubuser.BuildConfig
+import okhttp3.Interceptor
 
 class ApiConfig {
     companion object{
-        fun getApiService(): ApiService {
-            val loggingInterceptor = if (BuildConfig.DEBUG) {
-                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-            } else {
-                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
-            }
 
+        private const val BASE_URL = BuildConfig.BASE_URL
+        val mySuperScretKey = BuildConfig.KEY
+        fun getApiService(): ApiService {
+            val authInterceptor = Interceptor { chain ->
+                val req = chain.request()
+                val requestHeaders = req.newBuilder()
+                    .addHeader("Authorization", mySuperScretKey)
+                    .build()
+                chain.proceed(requestHeaders)
+            }
             val client = OkHttpClient.Builder()
-                .addInterceptor(loggingInterceptor)
+                .addInterceptor(authInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.github.com/")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

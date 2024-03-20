@@ -15,19 +15,7 @@ import com.rad21.githubuser.databinding.ActivityDetailBinding
 
 class DetailUserActivity : AppCompatActivity() {
 
-
     private lateinit var binding: ActivityDetailBinding
-
-    companion object {
-
-        const val EXTRA_USER = "extra_user"
-
-        @StringRes
-        private val TAB_TITLES = intArrayOf(
-            R.string.followers,
-            R.string.following
-        )
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,5 +61,15 @@ class DetailUserActivity : AppCompatActivity() {
 
     private fun showProgressBar(isLoading: Boolean) {
         binding.progressBarDetail.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+    companion object {
+
+        const val EXTRA_USER = "extra_user"
+
+        @StringRes
+        private val TAB_TITLES = intArrayOf(
+            R.string.followers,
+            R.string.following
+        )
     }
 }
