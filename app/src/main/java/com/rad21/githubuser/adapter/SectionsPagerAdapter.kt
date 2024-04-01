@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.rad21.githubuser.FollowerFragment
-import com.rad21.githubuser.FollowingFragment
+import com.rad21.githubuser.fragment.FollowerFragment
+import com.rad21.githubuser.fragment.FollowingFragment
 
 class SectionsPagerAdapter(activity: AppCompatActivity, data: Bundle): FragmentStateAdapter(activity) {
 

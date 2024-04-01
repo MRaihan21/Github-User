@@ -9,4 +9,8 @@
     <string name="content_tab_text">This is Tab %1$d</string>
     <string name="hello">Hello</string>
 
+    <string name="dark_mode">Dark Mode</string>
+    <string name="loves">loves</string>
+    <string name="setting">settings</string>
+
 </resources>

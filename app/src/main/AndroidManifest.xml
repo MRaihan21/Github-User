@@ -14,16 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubUser"
         tools:targetApi="31">
-
         <activity
-            android:name=".DetailUserActivity"
-            android:exported="false"
-            />
-
+            android:name=".ui.FavoriteActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            >
+            android:name=".ui.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DetailUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

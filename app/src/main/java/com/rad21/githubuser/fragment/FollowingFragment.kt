@@ -1,4 +1,4 @@
-package com.rad21.githubuser
+package com.rad21.githubuser.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.rad21.githubuser.ui.DetailUserActivity
 import com.rad21.githubuser.adapter.FollowingAdapter
 import com.rad21.githubuser.data.response.UserFollowingResponseItem
 import com.rad21.githubuser.databinding.FragmentFollowingBinding
+import com.rad21.githubuser.viewmodel.FollowingViewModel
 
 class FollowingFragment : Fragment() {
 

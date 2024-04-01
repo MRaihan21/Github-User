@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/itemCard"
     android:layout_margin="12dp"
-    app:cardCornerRadius="16dp"
-    android:backgroundTint="@color/black">
+    app:cardCornerRadius="10dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,6 +16,7 @@
             android:id="@+id/iv_users"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_margin="8dp"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +29,7 @@
             android:layout_marginStart="16dp"
             android:text="Full Name"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_users"
             app:layout_constraintStart_toEndOf="@+id/iv_users"
             app:layout_constraintTop_toTopOf="@+id/iv_users"
             app:layout_constraintVertical_bias="0.47" />

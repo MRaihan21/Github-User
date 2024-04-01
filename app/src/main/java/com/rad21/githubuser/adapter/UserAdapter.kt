@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.rad21.githubuser.DetailUserActivity
+import com.rad21.githubuser.ui.DetailUserActivity
 import com.rad21.githubuser.data.response.ItemsItem
 import com.rad21.githubuser.databinding.ItemUserBinding
 
@@ -24,6 +24,7 @@ class UserAdapter: ListAdapter<ItemsItem, UserAdapter.MyViewHolder>(DIFF_CALLBAC
             itemView.setOnClickListener {
                 val intent = Intent(clickUser, DetailUserActivity::class.java)
                 intent.putExtra(DetailUserActivity.EXTRA_USER, user.login)
+                intent.putExtra(DetailUserActivity.EXTRA_IMG, user.avatarUrl)
                 clickUser.startActivity(intent)
             }
 

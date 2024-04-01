@@ -1,4 +1,4 @@
-package com.rad21.githubuser
+package com.rad21.githubuser.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
