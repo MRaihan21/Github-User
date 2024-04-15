@@ -133,8 +133,10 @@ class DetailUserActivity : AppCompatActivity() {
     private fun displayUserDetail(user: DetailUserResponse) {
         binding.tvNameDetail.text = user.name
         binding.tvUsernameDetail.text = user.login
-        binding.tvFollowing.text = "${user.following} Following"
-        binding.tvFollowers.text = "${user.followers} Followers"
+//        binding.tvFollowing.text = "${user.following} Following"
+        binding.tvFollowing.text = resources.getString(R.string.following)
+//        binding.tvFollowers.text = "${user.followers} Followers"
+        binding.tvFollowers.text = resources.getString(R.string.followers)
         Glide.with(this)
             .load(user.avatarUrl)
             .into(binding.ivDetail)

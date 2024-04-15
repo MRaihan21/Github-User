@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewbinding.ViewBinding
 import com.rad21.githubuser.ui.DetailUserActivity
 import com.rad21.githubuser.adapter.FollowingAdapter
 import com.rad21.githubuser.data.response.UserFollowingResponseItem

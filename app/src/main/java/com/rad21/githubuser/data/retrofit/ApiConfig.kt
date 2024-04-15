@@ -10,7 +10,7 @@ class ApiConfig {
     companion object{
 
         private const val BASE_URL = BuildConfig.BASE_URL
-        val mySuperScretKey = BuildConfig.KEY
+        private val mySuperScretKey = BuildConfig.KEY
         fun getApiService(): ApiService {
             val authInterceptor = Interceptor { chain ->
                 val req = chain.request()

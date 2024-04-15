@@ -13,4 +13,6 @@
     <string name="loves">loves</string>
     <string name="setting">settings</string>
 
+    <string name="splashscreen">splashScreen</string>
+
 </resources>
