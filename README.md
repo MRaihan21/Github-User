@@ -1,4 +1,4 @@
-# Chelsea Player
+# Github User
 Dicoding Submission - Membuat aplikasi Github User pada Android Studio dengan mempelajari Option Menu pada AppBar, SearchBar dan SearchView, Tab Layout dengan ViewPager2, Networking dengan Retrofit, ViewModel, Livedata, DataStore, Room, Repository dan Injection.
 
 ### Submission Screenshots:
